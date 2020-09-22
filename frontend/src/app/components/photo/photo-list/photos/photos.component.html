@@ -1,8 +1,12 @@
-<ol class="list-unstyled row">
-    <li *ngFor="let photo of photos" class="col-4">
-        <app-photo
-            [url]="photo.url"
-            [description]="photo.description">
-        </app-photo>
+<h3 class="text-center text-muted" *ngIf="!photos.length">Nenhuma foto encontrada</h3>
+
+<ol class="list-unstyled">
+    <li *ngFor="let columns of rows" class="row">
+        <div *ngFor="let photos of columns" class="col-4">
+            <app-photo
+                [url]="photos.url"
+                [description]="photos.description">
+            </app-photo>
+        </div>
     </li>
 </ol>

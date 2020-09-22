@@ -15,11 +15,12 @@ export class PhotoListComponent implements OnInit {
 
   photos: PhotoDataModel[];
 
+  filter = '';
+
   ngOnInit(): void {
     const userName = this.route.snapshot.params.userName;
     this.photoService.photosFromUser(userName).subscribe(photo => {
       this.photos = photo;
     });
   }
-
 }
