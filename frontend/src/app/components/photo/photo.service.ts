@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { PhotoDataModel } from './photo-data.model';
@@ -14,5 +14,11 @@ export class PhotoService {
 
   photosFromUser(userName: string): Observable<PhotoDataModel[]> {
     return this.http.get<PhotoDataModel[]>(`${this.BASE_URL}/${userName}/photos`);
+  }
+
+  photosFromUserPaginated(userName: string, page: number): Observable<PhotoDataModel[]> {
+    const params = new HttpParams().append('page', page.toString());
+
+    return this.http.get<PhotoDataModel[]>(`${this.BASE_URL}/${userName}/photos`, { params });
   }
 }
