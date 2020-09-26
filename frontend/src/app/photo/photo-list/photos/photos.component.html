@@ -1,0 +1,18 @@
+<h3 class="text-center text-muted" *ngIf="!photos.length">Nenhuma foto encontrada</h3>
+
+<ol class="list-unstyled">
+    <li *ngFor="let columns of rows" class="row no-gutters">
+        <div *ngFor="let photos of columns" class="col-4" >
+            <app-card [title]="photos.description">
+                <app-photo
+                    [url]="photos.url"
+                    [description]="photos.description">
+                </app-photo>
+                <div class="text-center p1">
+                    <i aria-hidden class="fa fa-heart-o fa-1x mr-1">{{ photos.likes }}</i>
+                    <i aria-hidden class="fa fa-comment-o fa-1x ml-1">{{ photos.comments }}</i>
+                </div>
+            </app-card>
+        </div>
+    </li>
+</ol>

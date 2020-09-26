@@ -6,14 +6,8 @@
             placeholder="Pesquisar"  
             autofocus
             (keyup)="debounce.next($event.target.value)"
+            [value]="value"
         >
+        <i aria-hidden class="fa fa-search ml-2"></i>
     </form>
 </div>
-
-<app-photos [photos]="photos | filterByDescription: filter"></app-photos>
-
-<app-load-button
-    (click)="load()"
-    [hasMore]="hasMore"
->
-</app-load-button>

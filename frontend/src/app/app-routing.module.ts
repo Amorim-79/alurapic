@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PhotoFormComponent } from './components/photo/photo-form/photo-form.component';
-import { PhotoListComponent } from './components/photo/photo-list/photo-list.component';
-import { NotFoundComponent } from './components/errors/not-found/not-found.component';
+import { PhotoFormComponent } from './photo/photo-form/photo-form.component';
+import { PhotoListComponent } from './photo/photo-list/photo-list.component';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
 
-import { PhotoListResolver } from './components/photo/photo-list/photo-list.resolver';
+import { PhotoListResolver } from './photo/photo-list/photo-list.resolver';
 
 const routes: Routes = [
   { path: '', component: NotFoundComponent },
