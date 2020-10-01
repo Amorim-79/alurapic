@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PhotosModule } from './photo/photos.module';
 import { ErrorsModule } from './errors/errors.module';
 import { CardModule } from './shared/components/card/card.module';
+import { DarkenOnHoverModule } from './shared/directives/darken-on-hover/darken-on-hover.module';
 
 import { AppComponent } from './app.component';
 
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
     PhotosModule,
     ErrorsModule,
     CardModule,
+    DarkenOnHoverModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
