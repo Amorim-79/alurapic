@@ -10,6 +10,7 @@ import { LoadButtonComponent } from './load-button/load-button.component';
 import { FilterByDescription } from './photos/filter-by-description.pipe';
 import { SearchComponent } from './search/search.component';
 import { CardModule } from 'src/app/shared/components/card/card.module';
+import { DarkenOnHoverModule } from '../../shared/directives/darken-on-hover/darken-on-hover.module';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { CardModule } from 'src/app/shared/components/card/card.module';
     imports: [
         PhotoModule,
         CardModule,
-        CommonModule
+        CommonModule,
+        DarkenOnHoverModule,
     ]
 })
 export class PhotoListModule {  }
